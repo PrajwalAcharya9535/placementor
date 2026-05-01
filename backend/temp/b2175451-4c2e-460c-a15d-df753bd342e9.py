@@ -1,0 +1,19 @@
+import sys
+
+data = sys.stdin.read().strip().split()
+
+# 🔥 remove invalid values
+data = [x for x in data if x.isdigit()]
+
+if len(data) < 2:
+    print("[]")
+    exit()
+
+nums = list(map(int, data[:-1]))
+target = int(data[-1])
+
+for i in range(len(nums)):
+    for j in range(i+1, len(nums)):
+        if nums[i] + nums[j] == target:
+            print(f"[{i},{j}]")
+            exit()

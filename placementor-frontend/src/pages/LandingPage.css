@@ -1,0 +1,53 @@
+.landing-container{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+font-family:Arial;
+
+/* Professional gradient background */
+background: linear-gradient(135deg,#2c4bff,#6c8cff,#e3e9ff);
+}
+
+.title{
+font-size:48px;
+color:white;
+}
+
+.tagline{
+font-size:18px;
+color:white;
+opacity:0.9;
+}
+
+.loading{
+margin-top:20px;
+color:white;
+}
+
+.imageMove{
+width:500px;
+margin-top:30px;
+
+/* animation */
+animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%{
+transform: translateY(0px);
+}
+
+50%{
+transform: translateY(-15px);
+}
+
+100%{
+transform: translateY(0px);
+}
+
+}
